@@ -12,7 +12,7 @@ export class StudentComponent implements OnInit {
 
 
   @Input()student: Student;
-  students:Student[] = [
+  students: Student[] = [
     {name: 'Luke', isJedi: true, templo: 'Coruscant'},
     {name: 'Leia', isJedi: false},
     {name: 'Han Solo', isJedi: false}
@@ -21,6 +21,10 @@ export class StudentComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+  }
+
+  clicked(student: Student) {
+    console.log('Student: ' + student.name);
   }
 
 }

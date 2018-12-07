@@ -1,8 +1,12 @@
 <div *ngIf="students.length > 0">
   <div *ngFor="let student of students">
-    Student: {{student.name}}
+    Student: <a href="#" (click)="clicked(student)">{{student.name}}</a>
     <div *ngIf="student.isJedi">
       Jedi Temple: {{student.templo}}
+      <br/>
+      <button (click)="description.focus()">Focus!</button>
+      <br/>
+      <textarea #description></textarea>
     </div>
   </div>
 </div>
