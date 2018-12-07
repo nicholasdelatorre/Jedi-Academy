@@ -12,6 +12,11 @@ export class StudentComponent implements OnInit {
 
 
   @Input()student: Student;
+  students:Student[] = [
+    {name: 'Luke', isJedi: true, templo: 'Coruscant'},
+    {name: 'Leia', isJedi: false},
+    {name: 'Han Solo', isJedi: false}
+  ];
 
   constructor() { }
 

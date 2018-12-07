@@ -1,6 +1,12 @@
-<div>
-  Student: {{student.name}}
-  <div [hidden]="!student.isJedi">
-    Jedi Temple: {{student.templo}}
+<div *ngIf="students.length > 0">
+  <div *ngFor="let student of students">
+    Student: {{student.name}}
+    <div *ngIf="student.isJedi">
+      Jedi Temple: {{student.templo}}
+    </div>
   </div>
 </div>
+
+<p *ngIf="students.length === 0">
+  Não há dados para exibir
+</p>
